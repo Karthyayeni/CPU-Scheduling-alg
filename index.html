@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OS Project</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+
+    <body>
+        <div id="notAnswer">
+            <h1 id="header">CPU Scheduling Simulator</h1>
+
+            <input placeholder="Number Of Processes" id="numberOfProcesses" type="text" onkeyup="handleKeyUp()"/>
+            <select id="criteria">
+                <option value="firstComeFirstServed" selected>First Come First Serve</option>
+                <option value="shortedJobFirst">Shortest Job First (Non-Preemtive)</option>
+                <option value="shortedJobFirstPreemtive">Shortest Job First (Preemtive)</option>
+                <option value="priority">Priority (Non-Preemtive)</option>
+                <option value="priorityPreemtive">Priority (Preemtive)</option>
+                <option value="RR">Round Robin</option>
+            </select>
+            <br />
+            <button id="proceedButton" onclick="onProceed()">Proceed</button><br><br><br>
+
+            <br><br>
+            <div id="inputsDiv">
+                <div id="inputsArea"></div>
+                <button href="#" id="submitButton" onclick="handleNoSimulate(); onSubmit()">Show Chart</button>
+                <button href="#" id="simulateButton" onclick="handleSimulate(); onSubmit()">Simulate Action</button>
+                <br/><br/>
+                <div id="namesDiv">
+                    <button href="#" id="namesButton" onclick="handleChangeNames()">Custom Process Naming</button>
+                </div>
+            </div>
+        </div>
+        <div id="warningArea"></div>
+        <div id="answerAreas">
+            <div id="answerArea"></div>
+            <div id="infoArea"></div>
+        </div>
+        <script type="text/javascript" src="processDef.js"></script>
+
+        <script type="text/javascript" src="drawingCoreSimulation.js"></script>
+        <script type="text/javascript" src="drawingCoreNoSimulation.js"></script>
+        <script type="text/javascript" src="draw.js"></script>
+        <script type="text/javascript" src="finalize.js"></script>
+        <script type="text/javascript" src="src/FCFS.js"></script>
+        <script type="text/javascript" src="src/Priority-non-preemtive.js"></script>
+        <script type="text/javascript" src="src/Priority-preemtive.js"></script>
+        <script type="text/javascript" src="src/RR.js"></script>
+        <script type="text/javascript" src="src/SJF-non-preemtive.js"></script>
+        <script type="text/javascript" src="src/SJF-preemtive.js"></script>
+        
+        <script type="text/javascript" src="script.js"></script>
+
+        <script type="text/javascript" src="handlers.js"></script>
+        
+    </body>
+</html>

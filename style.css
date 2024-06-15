@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgb(26, 20, 20);
+    max-width: 1140px;
+    text-align: center;
+    background-color: bisque;
+    background-size: cover;
+    background-position: top;
+    height:95vh;
+}
+
+#notAnswer {
+    margin-top: 60px;
+    margin-left: 12vw
+}
+
+#header {
+    color:#000a58;
+}
+
+input, select {
+    border-radius: 10px;
+    width:150px;
+    height: 30px;
+    text-align: center;
+    border: none
+}
+
+.nameInput {
+    width: 100px;
+    border-radius: 5px;
+}
+
+#numberOfProcesses {
+    width:200px;
+    height: 40px;
+}
+
+select {
+    width: 250px;
+    height: 40px;
+}
+
+select{
+    padding-left: 20px
+}
+
+#proceedButton {
+    margin-top: 20px
+}
+
+#inputsDiv {
+    margin-top:-80px;
+}
+
+button {
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 30px;
+    width: 100px
+}
+#submitButton, #simulateButton {
+    display: none;
+    width:200px
+}
+
+#namesDiv {
+    text-align: left;
+}
+
+#namesButton {
+    display: none;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #28b485;
+    position: absolute;
+    left:5vw;
+    top:92vh;
+}
+
+
+#answerAreas {
+    margin-left: 0vw;
+    margin-top: -30vh;
+    margin-bottom: -20vh;
+}
+
+@media (max-width: 600px) {
+    #answerAreas {
+        margin-left: 40px;
+    }
+}
+
+#infoArea {
+    opacity: 0;
+    margin-top: 10vh;
+}
+
+
+@keyframes goLeft {
+    100% {
+        margin-left:-35vw;
+    }
+}
+
+@keyframes showMe {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showMeSimulation {
+    0%{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        opacity: 0;
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 1;
+    }
+}
